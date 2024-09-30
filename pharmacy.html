@@ -50,7 +50,7 @@
     </header>
     <main>
         <section class="docs">
-            <div class="top-docs-desc">Our in-house pharmacy ensures patients have convenient access to prescribed medications. We provide access to a wide variety of trusted medications at a competitive price.</div>
+            <div class="top-docs-desc"><p>Our in-house pharmacy located at the main hospital in Colombo 07 ensures patients have convenient access to prescribed medications. We provide access to a wide variety of trusted medications at a competitive price.</p></div>
             <div class="top-docs">
                 <img class="polaroid" src="./images/pharmmain2.webp" width="300px" height="200px">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15843.062630415658!2d79.8612289!3d6.9185953!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2596d3cb8fe07%3A0x2b0ae2edd563a661!2sAsia%20Pacific%20Institute%20of%20Information%20Technology%20(APIIT)!5e0!3m2!1sen!2slk!4v1726153508119!5m2!1sen!2slk" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -79,8 +79,8 @@
                 <fieldset>
                     <legend>Prescription Details<Details></Details></legend><br><br>
                     
-                    <label for="date-app">Pickup Date:</label><br><br>
-                    <input type="date-app" id="date" name="date-app" value="" min="1997-01-01" max="2030-12-31" required><br><br>
+                    <label for="date">Pickup Date:</label><br><br>
+                    <input type="date" id="date" name="date" value="" min="1997-01-01" max="2030-12-31" required><br><br>
                     
                     <label for="time">Pickup Time:</label><br><br>
                     <select id="time" name="time" required>
@@ -89,12 +89,96 @@
                         <option value="evening">Evening(3.00 PM - 5.00 PM)</option>
                     </select><br><br>
 
-                    <label for="reason">Prescription:</label><br><br>
-                    <textarea id="reason" name="reason" rows="4"></textarea><br><br>
+                    <!-- Antibiotics Drop-Down List -->
+                    <label for="antibiotic">Antibiotic:</label>
+                    <select id="antibiotic" name="antibiotic">
+                        <option value="" disabled selected>Select an antibiotic</option>
+                        <option value="amoxicillin">Amoxicillin</option>
+                        <option value="azithromycin">Azithromycin</option>
+                        <option value="ciprofloxacin">Ciprofloxacin</option>
+                        <option value="doxycycline">Doxycycline</option>
+                        <option value="metronidazole">Metronidazole</option>
+                    </select><br><br>
+                    <label for="antibiotic-quantity">Quantity:</label>
+                    <input type="number" id="antibiotic-quantity" name="antibioticQuantity" min="1" max="100"><br><br>
 
-                    <label for="reason">Dosage Details:</label><br><br>
-                    <textarea id="reason" name="reason" rows="4"></textarea><br><br>
-                    
+                    <!-- Pain Relievers Drop-Down List -->
+                    <label for="pain-reliever">Pain Reliever:</label>
+                    <select id="pain-reliever" name="painReliever">
+                        <option value="" disabled selected>Select a pain reliever</option>
+                        <option value="paracetamol">Paracetamol (Acetaminophen)</option>
+                        <option value="ibuprofen">Ibuprofen</option>
+                        <option value="aspirin">Aspirin</option>
+                        <option value="diclofenac">Diclofenac</option>
+                        <option value="naproxen">Naproxen</option>
+                    </select><br><br>
+                    <label for="pain-reliever-quantity">Quantity:</label>
+                    <input type="number" id="pain-reliever-quantity" name="painRelieverQuantity" min="1" max="100"><br><br>
+
+                    <!-- Antihistamines Drop-Down List -->
+                    <label for="antihistamine">Antihistamine:</label>
+                    <select id="antihistamine" name="antihistamine">
+                        <option value="" disabled selected>Select an antihistamine</option>
+                        <option value="loratadine">Loratadine</option>
+                        <option value="cetirizine">Cetirizine</option>
+                        <option value="diphenhydramine">Diphenhydramine</option>
+                        <option value="fexofenadine">Fexofenadine</option>
+                        <option value="chlorpheniramine">Chlorpheniramine</option>
+                    </select><br><br>
+                    <label for="antihistamine-quantity">Quantity:</label>
+                    <input type="number" id="antihistamine-quantity" name="antihistamineQuantity" min="1" max="100"><br><br>
+
+                    <!-- Antacids & Anti-Ulcer Drop-Down List -->
+                    <label for="antacid">Antacid/Anti-Ulcer:</label>
+                    <select id="antacid" name="antacid">
+                        <option value="" disabled selected>Select an antacid/anti-ulcer</option>
+                        <option value="omeprazole">Omeprazole</option>
+                        <option value="ranitidine">Ranitidine</option>
+                        <option value="pantoprazole">Pantoprazole</option>
+                        <option value="esomeprazole">Esomeprazole</option>
+                        <option value="famotidine">Famotidine</option>
+                    </select><br><br>
+                    <label for="antacid-quantity">Quantity:</label>
+                    <input type="number" id="antacid-quantity" name="antacidQuantity" min="1" max="100"><br><br>
+
+                    <!-- Antidiabetic Drop-Down List -->
+                    <label for="antidiabetic">Antidiabetic:</label>
+                    <select id="antidiabetic" name="antidiabetic">
+                        <option value="" disabled selected>Select an antidiabetic</option>
+                        <option value="metformin">Metformin</option>
+                        <option value="glibenclamide">Glibenclamide</option>
+                        <option value="glipizide">Glipizide</option>
+                        <option value="insulin">Insulin (Various types)</option>
+                        <option value="sitagliptin">Sitagliptin</option>
+                    </select><br><br>
+                    <label for="antidiabetic-quantity">Quantity:</label>
+                    <input type="number" id="antidiabetic-quantity" name="antidiabeticQuantity" min="1" max="100"><br><br>
+
+                    <!-- Cardiovascular Medicines Drop-Down List -->
+                    <label for="cardiovascular">Cardiovascular Medicine:</label>
+                    <select id="cardiovascular" name="cardiovascular">
+                        <option value="" disabled selected>Select a cardiovascular medicine</option>
+                        <option value="amlodipine">Amlodipine</option>
+                        <option value="atenolol">Atenolol</option>
+                        <option value="losartan">Losartan</option>
+                        <option value="enalapril">Enalapril</option>
+                        <option value="bisoprolol">Bisoprolol</option>
+                    </select><br><br>
+                    <label for="cardiovascular-quantity">Quantity:</label>
+                    <input type="number" id="cardiovascular-quantity" name="cardiovascularQuantity" min="1" max="100"><br><br>
+
+                    <!-- Cough and Cold Medicines Drop-Down List -->
+                    <label for="cough-medicine">Cough/Cold Medicine:</label>
+                    <select id="cough-medicine" name="coughMedicine">
+                        <option value="" disabled selected>Select a cough/cold medicine</option>
+                        <option value="dextromethorphan">Dextromethorphan</option>
+                        <option value="guaifenesin">Guaifenesin</option>
+                        <option value="phenylephrine">Phenylephrine</option>
+                        <option value="pseudoephedrine">Pseudoephedrine</option>
+                        <option value="bromhexine">Bromhexine</option>
+                    </select><br><br>
+                    <label for="cough-medicine-quantity">Quantity:</label>
+                    <input type="number" id="cough-medicine-quantity" name="coughMedicineQuantity" min="1" max="100"><br><br>
                 </fieldset>
                 <input class="submit-button" type="submit" value="Submit"><br><br>     
             </form>
